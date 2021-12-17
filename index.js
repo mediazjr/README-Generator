@@ -97,7 +97,7 @@ const questions = [{
     {
         type: 'input',
         question: 'Please enter any additional questions.',
-        name: 'questions',
+        name: 'additional',
         validate: nameInput => {
             if (nameInput) {
                 return true;
@@ -138,10 +138,21 @@ const questions = [{
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions)
+        .then((responses) => {
+            const doneReadMe = generateMarkdown(responses);
+            console.log('Generating README');
+            console.log(doneReadMe);
+            fs.writeFileSync('README.md', doneReadMe)
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+}
 
 // Function call to initialize app
 init();
