@@ -1,8 +1,6 @@
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-    return `
 
-  # ${data.title}
+
+  # This is the Project Title
 
   ## Table of Contents
     1. [Description](#description)
@@ -15,33 +13,28 @@ function generateMarkdown(data) {
   
 
   ## Description
-  ${data.description}
+  This is where the description goes
 
 
   ## Installation Instructions
-  ${data.installation}
+  This is for the installation instructions
 
   ## Usage Information
-  ${data.usage}
+  This is for the usage info
 
   ## Contribution Guidelines
-  ${data.contribution}
+  This is for the contribution guidelines
 
   ## Test Instructions 
-  ${data.test}
+  This is for the test instructions
 
   ## License 
-  This app is covered by ${data.license}.
+  This app is covered by MIT.
 
   ## Questions
-  [GitHub Page](https://github.com/${data.username})
+  [GitHub Page](https://github.com/mediazjr)
 
-  Email: ${data.email}
+  Email: mediazjr@gmail.com
 
-  ${data.additional}
+  This is for additional questions
 
-`;
-
-}
-
-module.exports = generateMarkdown;
